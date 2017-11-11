@@ -1,0 +1,6 @@
+// Background
+$imagedir:'../images/';
+
+@mixin background($filename,$position:0 0,$repeat: no-repeat) {
+	background: transparent url(#{$imagedir}#{$filename}) $position $repeat;
+}

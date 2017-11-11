@@ -1,0 +1,23 @@
+/* ------------------------------------------------
+
+		Basic
+
+------------------------------------------------ */
+
+a {
+	@include transition-def();
+	color: $primary-color;
+
+	&:hover {
+		color: #0096f3;
+	}
+}
+
+h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+img {
+	max-width: 100%;
+}

@@ -1,0 +1,16 @@
+//Font styles
+@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false) {
+	font-family: $font-stack;
+	@if $size {
+		font-size: $size;
+	}
+	@if $colour {
+		color: $colour;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+}

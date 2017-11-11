@@ -1,0 +1,145 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$s-burger-gross-name: 's-burger_gross';
+$s-burger-gross-x: 577px;
+$s-burger-gross-y: 388px;
+$s-burger-gross-offset-x: -577px;
+$s-burger-gross-offset-y: -388px;
+$s-burger-gross-width: 62px;
+$s-burger-gross-height: 62px;
+$s-burger-gross-total-width: 1165px;
+$s-burger-gross-total-height: 1317px;
+$s-burger-gross-image: '../images/sprite.png';
+$s-burger-gross: (577px, 388px, -577px, -388px, 62px, 62px, 1165px, 1317px, '../images/sprite.png', 's-burger_gross', );
+$s-burger-klein-name: 's-burger_klein';
+$s-burger-klein-x: 649px;
+$s-burger-klein-y: 388px;
+$s-burger-klein-offset-x: -649px;
+$s-burger-klein-offset-y: -388px;
+$s-burger-klein-width: 36px;
+$s-burger-klein-height: 35px;
+$s-burger-klein-total-width: 1165px;
+$s-burger-klein-total-height: 1317px;
+$s-burger-klein-image: '../images/sprite.png';
+$s-burger-klein: (649px, 388px, -649px, -388px, 36px, 35px, 1165px, 1317px, '../images/sprite.png', 's-burger_klein', );
+$s-logo-gross-weiss-name: 's-logo_gross_weiss';
+$s-logo-gross-weiss-x: 417px;
+$s-logo-gross-weiss-y: 0px;
+$s-logo-gross-weiss-offset-x: -417px;
+$s-logo-gross-weiss-offset-y: 0px;
+$s-logo-gross-weiss-width: 748px;
+$s-logo-gross-weiss-height: 378px;
+$s-logo-gross-weiss-total-width: 1165px;
+$s-logo-gross-weiss-total-height: 1317px;
+$s-logo-gross-weiss-image: '../images/sprite.png';
+$s-logo-gross-weiss: (417px, 0px, -417px, 0px, 748px, 378px, 1165px, 1317px, '../images/sprite.png', 's-logo_gross_weiss', );
+$s-logo-klein-weiss-name: 's-logo_klein_weiss';
+$s-logo-klein-weiss-x: 417px;
+$s-logo-klein-weiss-y: 388px;
+$s-logo-klein-weiss-offset-x: -417px;
+$s-logo-klein-weiss-offset-y: -388px;
+$s-logo-klein-weiss-width: 150px;
+$s-logo-klein-weiss-height: 139px;
+$s-logo-klein-weiss-total-width: 1165px;
+$s-logo-klein-weiss-total-height: 1317px;
+$s-logo-klein-weiss-image: '../images/sprite.png';
+$s-logo-klein-weiss: (417px, 388px, -417px, -388px, 150px, 139px, 1165px, 1317px, '../images/sprite.png', 's-logo_klein_weiss', );
+$s-logo-klein-weiss-b2b-name: 's-logo_klein_weiss_b2b';
+$s-logo-klein-weiss-b2b-x: 0px;
+$s-logo-klein-weiss-b2b-y: 0px;
+$s-logo-klein-weiss-b2b-offset-x: 0px;
+$s-logo-klein-weiss-b2b-offset-y: 0px;
+$s-logo-klein-weiss-b2b-width: 407px;
+$s-logo-klein-weiss-b2b-height: 1317px;
+$s-logo-klein-weiss-b2b-total-width: 1165px;
+$s-logo-klein-weiss-b2b-total-height: 1317px;
+$s-logo-klein-weiss-b2b-image: '../images/sprite.png';
+$s-logo-klein-weiss-b2b: (0px, 0px, 0px, 0px, 407px, 1317px, 1165px, 1317px, '../images/sprite.png', 's-logo_klein_weiss_b2b', );
+$s-x-name: 's-x';
+$s-x-x: 695px;
+$s-x-y: 388px;
+$s-x-offset-x: -695px;
+$s-x-offset-y: -388px;
+$s-x-width: 29px;
+$s-x-height: 29px;
+$s-x-total-width: 1165px;
+$s-x-total-height: 1317px;
+$s-x-image: '../images/sprite.png';
+$s-x: (695px, 388px, -695px, -388px, 29px, 29px, 1165px, 1317px, '../images/sprite.png', 's-x', );
+$spritesheet-width: 1165px;
+$spritesheet-height: 1317px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($s-burger-gross, $s-burger-klein, $s-logo-gross-weiss, $s-logo-klein-weiss, $s-logo-klein-weiss-b2b, $s-x, );
+$spritesheet: (1165px, 1317px, '../images/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
