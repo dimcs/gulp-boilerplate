@@ -12,7 +12,7 @@
         ```
         cd /path/to/install/location
         
-        git clone git@github.com:[your_username]/vuejs-cinema.git
+        git clone git@github.com:[your_username]/gulp-boilerplate.git
         ```
     
     **Option 2 (easier)**
@@ -22,7 +22,7 @@
     ```
     cd /path/to/install/location
     
-    git clone https://github.com/vuejsdevelopers/vuejs-cinema.git
+    git clone https://github.com/dimcs/gulp-boilerplate.git
     ```    
    
 2. Install dependencies
